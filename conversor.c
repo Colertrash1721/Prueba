@@ -15,6 +15,14 @@ int main(void) {
 
     printf("Centimetros: %.2f cm\n", metros * 100);
     printf("Kilometros: %.3f km\n", metros / 1000);
+    
+    double km;
+
+    printf("\nIngrese los kilometros: ");
+    scanf("%lf", &km);
+
+    printf("Millas: %.3f mi\n", km * 0.621371);
+    printf("Metros: %.2f m\n", km * 1000);
 
     return 0;
 }
