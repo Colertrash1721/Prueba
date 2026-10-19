@@ -6,20 +6,33 @@ int main()
     int opcion; 
     float resultado, num1, num2;  
 
-    printf("Dame el primer numero");
-    scanf("%c", num1); 
-    printf("Dame el segundo numero");
-    scanf("%c", num2); 
+    do {
 
-    switch(opcion)
-    {
-        case 1:
-            resultado = num1 + num2;
-            printf("%2.f", resultado); 
+        printf("\n1- SUMA\n2- RESTA\n3- MULTIPLICACION\n4- DIVISION\n5- SALIR\n");
+        scanf("%d", &opcion); 
 
-    }
-        
+        if (opcion >= 1 && opcion <= 4){
+            printf("Dame el primer numero");
+            scanf("%f", &num1); 
+            printf("Dame el segundo numero");
+            scanf("%f", &num2);
+        }
 
-    
+        switch(opcion)
+        {
+            case 1:
+                resultado = num1 + num2;
+                printf("%2f", resultado); 
+                break;    
+            case 5: 
+                printf("saliendo");
+                getch();
+                break; 
+            default: 
+                printf("Operacion no valida"); 
+                break;
+        }
+    } while (opcion != 5);
 
+    return 0; 
 }
