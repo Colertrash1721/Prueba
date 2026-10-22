@@ -22,14 +22,31 @@ int main()
         {
             case 1:
                 resultado = num1 + num2;
-                printf("%2f", resultado); 
-                break;    
+                printf("%2f", resultado);
+                getch(); 
+                break;
+            case 2: 
+                resultado = num1 - num2;
+                printf("%2f", resultado);
+                getch(); 
+                break;
+            case 3: 
+                resultado = num1 * num2;
+                printf("%2f", resultado);
+                getch(); 
+                break; 
+            case 4: 
+                resultado = num1 / num2;
+                printf("%2f", resultado);
+                getch(); 
+                break;                                     
             case 5: 
                 printf("saliendo");
                 getch();
                 break; 
             default: 
                 printf("Operacion no valida"); 
+                getch(); 
                 break;
         }
     } while (opcion != 5);
