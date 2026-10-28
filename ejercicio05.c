@@ -18,5 +18,22 @@ int main(void) {
     // Creamos un estudiante y le damos sus valores iniciales.
     struct Estudiante estudiante = {"Ana", 75.5};
 
+    // Creamos un puntero que apunta a la ficha del estudiante.
+    // El símbolo & significa "la dirección donde vive esta ficha".
+    struct Estudiante *ptr = &estudiante;
+
+    // Comprobamos que el puntero realmente apunta a algo.
+    if (ptr == NULL) {
+        printf("Error: el puntero no apunta a nada.\n");
+        return 1;
+    }
+
+    // Mostramos la nota ANTES de modificarla.
+    printf("Estudiante: %s\n", ptr->nombre);
+    printf("Nota antes: %.2f\n", ptr->nota);
+
+   
+
     return 0;
 }
+
