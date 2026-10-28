@@ -32,7 +32,12 @@ int main(void) {
     printf("Estudiante: %s\n", ptr->nombre);
     printf("Nota antes: %.2f\n", ptr->nota);
 
-   
+    // Modificamos la nota usando el puntero.
+    // El símbolo -> permite entrar a un campo de la ficha usando el puntero.
+    ptr->nota = 90.0;
+
+    // Mostramos la nota DESPUÉS de modificarla.
+    printf("Nota despues: %.2f\n", ptr->nota);
 
     return 0;
 }
